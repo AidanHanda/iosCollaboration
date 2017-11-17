@@ -11,7 +11,6 @@
  1. `9 == 9`
  */
 
-
 /*:
  2. `9 != 9`
  */
@@ -51,5 +50,6 @@
  9. `!true`
  */
 
+//Same as java!
 
 //: page 1 of 9  |  [Next: Exercise - If and If-Else Statements](@next)
