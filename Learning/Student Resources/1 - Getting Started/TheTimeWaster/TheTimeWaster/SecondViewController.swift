@@ -15,7 +15,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        updateScore()
     }
     
     override func loadView() {
@@ -36,7 +36,10 @@ class SecondViewController: UIViewController {
             appDelegate.subtractCounter(amount: 10)
             appDelegate.saveData()
             
-            
+            updateScore()
+            genVibe(success: true)
+        } else {
+            genVibe(success: false)
         }
     }
     
@@ -45,16 +48,113 @@ class SecondViewController: UIViewController {
         {
             appDelegate.setIncr(amount: 100)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 100)
+            updateScore()
+            genVibe(success: true)
+        } else {
+            genVibe(success: false)
         }
     }
     
     @IBAction func plus1000(_ sender: Any) {
-        if(appDelegate.getCounter()! >= 100000)
+        if(appDelegate.getCounter()! >= 1000)
         {
             appDelegate.setIncr(amount: 1000)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 1000)
+            updateScore()
+            genVibe(success: true)
+        } else {
+            genVibe(success: false)
         }
     }
+    @IBAction func plushunthou(_ sender: Any) {
+        if(appDelegate.getCounter()! >= 100000)
+        {
+            appDelegate.setIncr(amount: 100000)
+            appDelegate.setCounter(value: appDelegate.getCounter()! - 100000)
+            updateScore()
+            genVibe(success: true)
+        } else {
+            genVibe(success: false)
+        }
+    }
+    
+    @IBOutlet weak var Score: UILabel!
+    func updateScore()
+    {
+        Score.text = String(appDelegate.getCounter()!)
+    }
 
+    func genVibe(success: Bool){
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        if success {
+            generator.impactOccurred()
+        } else {
+            generator.impactOccurred()
+        }
+    }
+    
+    @IBAction func plusmil(_ sender: Any) {
+        if(appDelegate.getCounter()! >= 1000000)
+        {
+            appDelegate.setIncr(amount: 1000000)
+            appDelegate.setCounter(value: appDelegate.getCounter()! - 1000000)
+            updateScore()
+            genVibe(success: true)
+        } else {
+            genVibe(success: false)
+        }
+    }
+    
+    @IBAction func plushunmil(_ sender: Any) {
+        if(appDelegate.getCounter()! >= 100000000)
+        {
+            appDelegate.setIncr(amount: 100000000)
+            appDelegate.setCounter(value: appDelegate.getCounter()! - 100000000)
+            updateScore()
+            genVibe(success: true)
+        } else {
+            genVibe(success: false)
+        }
+    }
+    
+    @IBAction func plusbil(_ sender: Any) {
+        if(appDelegate.getCounter()! >= 1000000000)
+        {
+            appDelegate.setIncr(amount: 1000000000)
+            appDelegate.setCounter(value: appDelegate.getCounter()! - 1000000000)
+            updateScore()
+            genVibe(success: true)
+        } else {
+            genVibe(success: false)
+        }
+    }
+    
+    @IBAction func plusOneTril(_ sender: Any) {
+        if(appDelegate.getCounter()! >= 1000000000000)
+        {
+            appDelegate.setIncr(amount: 1000000000000)
+            appDelegate.setCounter(value: appDelegate.getCounter()! - 1000000000000)
+            updateScore()
+            genVibe(success: true)
+        } else {
+            genVibe(success: false)
+        }
+    }
+    
+    @IBAction func plusHundTril(_ sender: Any) {
+        if(appDelegate.getCounter()! >= 100000000000000)
+        {
+            appDelegate.setIncr(amount: 100000000000000)
+            appDelegate.setCounter(value: appDelegate.getCounter()! - 100000000000000)
+            updateScore()
+            genVibe(success: true)
+        } else {
+            genVibe(success: false)
+        }
+    }
 }
+
+
+
+
 
