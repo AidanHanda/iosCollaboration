@@ -33,7 +33,9 @@ class SecondViewController: UIViewController {
         if(appDelegate.getCounter()! >= 10)
         {
             appDelegate.setIncr(amount: 10)
-            appDelegate.setCounter(value: appDelegate.getCounter()! - 10)
+            appDelegate.subtractCounter(amount: 10)
+            appDelegate.saveData()
+            
             
         }
     }

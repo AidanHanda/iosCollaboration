@@ -21,6 +21,9 @@ class FirstViewController: UIViewController {
         super.loadView()
         LabelAF.text = String(appDelegate.getCounter()!);
     }
+    override func viewDidAppear(_ animated: Bool) {
+        LabelAF.text = String(appDelegate.getCounter()!);
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

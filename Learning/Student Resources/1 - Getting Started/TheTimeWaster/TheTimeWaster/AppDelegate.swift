@@ -73,6 +73,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setIncr(amount:Int ) {
         increment! += amount
     }
+    func subtractCounter(amount: Int)
+    {
+        counter = counter! - amount
+    }
 
 }
 
