@@ -18,8 +18,12 @@ class SecondViewController: UIViewController {
         updateScore()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        updateScore()
+    }
     override func loadView() {
         super.loadView()
+        updateScore()
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,8 +36,8 @@ class SecondViewController: UIViewController {
     @IBAction func plus10(_ sender: Any) {
         if(appDelegate.getCounter()! >= 10)
         {
-            appDelegate.setIncr(amount: 10)
-            appDelegate.subtractCounter(amount: 10)
+            appDelegate.setIncr(amount: 10 + appDelegate.getIncr()!)
+            appDelegate.subtractCounter(amount: 10 )
             appDelegate.saveData()
             
             updateScore()
@@ -44,9 +48,9 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func plus100(_ sender: Any) {
-        if(appDelegate.getCounter()! >= 1000)
+        if(appDelegate.getCounter()! >= 100)
         {
-            appDelegate.setIncr(amount: 100)
+            appDelegate.setIncr(amount: 100 + appDelegate.getIncr()!)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 100)
             updateScore()
             genVibe(success: true)
@@ -58,7 +62,7 @@ class SecondViewController: UIViewController {
     @IBAction func plus1000(_ sender: Any) {
         if(appDelegate.getCounter()! >= 1000)
         {
-            appDelegate.setIncr(amount: 1000)
+            appDelegate.setIncr(amount: 1000 + appDelegate.getIncr()!)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 1000)
             updateScore()
             genVibe(success: true)
@@ -69,7 +73,7 @@ class SecondViewController: UIViewController {
     @IBAction func plushunthou(_ sender: Any) {
         if(appDelegate.getCounter()! >= 100000)
         {
-            appDelegate.setIncr(amount: 100000)
+            appDelegate.setIncr(amount: 100000 + appDelegate.getIncr()!)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 100000)
             updateScore()
             genVibe(success: true)
@@ -96,7 +100,7 @@ class SecondViewController: UIViewController {
     @IBAction func plusmil(_ sender: Any) {
         if(appDelegate.getCounter()! >= 1000000)
         {
-            appDelegate.setIncr(amount: 1000000)
+            appDelegate.setIncr(amount: 1000000 + appDelegate.getIncr()!)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 1000000)
             updateScore()
             genVibe(success: true)
@@ -108,7 +112,7 @@ class SecondViewController: UIViewController {
     @IBAction func plushunmil(_ sender: Any) {
         if(appDelegate.getCounter()! >= 100000000)
         {
-            appDelegate.setIncr(amount: 100000000)
+            appDelegate.setIncr(amount: 100000000 + appDelegate.getIncr()!)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 100000000)
             updateScore()
             genVibe(success: true)
@@ -120,7 +124,7 @@ class SecondViewController: UIViewController {
     @IBAction func plusbil(_ sender: Any) {
         if(appDelegate.getCounter()! >= 1000000000)
         {
-            appDelegate.setIncr(amount: 1000000000)
+            appDelegate.setIncr(amount: 1000000000 + appDelegate.getIncr()!)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 1000000000)
             updateScore()
             genVibe(success: true)
@@ -132,7 +136,7 @@ class SecondViewController: UIViewController {
     @IBAction func plusOneTril(_ sender: Any) {
         if(appDelegate.getCounter()! >= 1000000000000)
         {
-            appDelegate.setIncr(amount: 1000000000000)
+            appDelegate.setIncr(amount: 1000000000000 + appDelegate.getIncr()!)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 1000000000000)
             updateScore()
             genVibe(success: true)
@@ -144,13 +148,19 @@ class SecondViewController: UIViewController {
     @IBAction func plusHundTril(_ sender: Any) {
         if(appDelegate.getCounter()! >= 100000000000000)
         {
-            appDelegate.setIncr(amount: 100000000000000)
+            appDelegate.setIncr(amount: 100000000000000 + appDelegate.getIncr()!)
             appDelegate.setCounter(value: appDelegate.getCounter()! - 100000000000000)
             updateScore()
             genVibe(success: true)
         } else {
             genVibe(success: false)
         }
+    }
+    
+    @IBAction func reset(_ sender: Any) {
+        appDelegate.setIncr(amount: 1)
+        appDelegate.setCounter(value: 0)
+        updateScore()
     }
 }
 

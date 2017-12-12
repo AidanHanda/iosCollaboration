@@ -33,6 +33,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Money-Free-Download-PNG.png" translatesAutoresizingMaskIntoConstraints="NO" id="IBE-wx-OfL">
+                                <rect key="frame" x="67" y="394" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -44,6 +48,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Waster" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="Image" destination="IBE-wx-OfL" id="dB1-4E-Ca1"/>
                         <outlet property="LabelAF" destination="TZT-0I-Vzr" id="Hg5-9P-Mu2"/>
                     </connections>
                 </viewController>
@@ -140,6 +145,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+1,000,000,000,000,000,000,000,000,000,000"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPi-zl-TH1">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="reset:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="N6K-8I-wSG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -181,6 +194,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Money-Free-Download-PNG.png" width="2808" height="3586"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

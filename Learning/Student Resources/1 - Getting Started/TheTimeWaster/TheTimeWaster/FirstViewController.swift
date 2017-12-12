@@ -12,17 +12,17 @@ class FirstViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
-        LabelAF.text = String(appDelegate.getCounter()!);
+        LabelAF.text = getNumFromCounter();
         // Do any additional setup after loading the view, typically from a nib.
         
     }
     
     override func loadView() {
         super.loadView()
-        LabelAF.text = String(appDelegate.getCounter()!);
+        LabelAF.text = getNumFromCounter();
     }
     override func viewDidAppear(_ animated: Bool) {
-        LabelAF.text = String(appDelegate.getCounter()!);
+        LabelAF.text = getNumFromCounter();
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,13 +33,32 @@ class FirstViewController: UIViewController {
     
     @IBAction func BigBadButton(_ sender: Any) {
         appDelegate.incrCounter()
-        LabelAF.text = String(appDelegate.getCounter()!)
+        animation(viewAnimation: Image)
+        LabelAF.text = getNumFromCounter()
         appDelegate.saveData()
     }
     
     @IBOutlet weak var LabelAF: UILabel!
+    @IBOutlet weak var Image: UIImageView!
     
-
-
+    private func animation(viewAnimation: UIView) {
+        
+        UIView.animate(withDuration: 2, animations: {
+            viewAnimation.frame.origin.x = +viewAnimation.frame.width
+        }) { (_) in
+            UIView.animate(withDuration: 2, delay: 1, options: [.curveEaseIn], animations: {
+                viewAnimation.frame.origin.x -= viewAnimation.frame.width
+            })
+        }
+    }
+    
+    func getNumFromCounter() -> String  {
+        
+        let n = NumberFormatter()
+        n.numberStyle = .currency
+        n.locale = Locale.current
+        
+        return n.string(from: NSNumber(value: appDelegate.getCounter()!))!
+    }
 }
 

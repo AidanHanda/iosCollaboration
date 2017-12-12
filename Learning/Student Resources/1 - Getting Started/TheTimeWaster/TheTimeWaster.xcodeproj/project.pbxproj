@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40B9455D1FE07696007459F0 /* Money-Free-Download-PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 40B9455C1FE07696007459F0 /* Money-Free-Download-PNG.png */; };
 		B82DF85C1FD88ED9008290F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82DF85B1FD88ED9008290F5 /* AppDelegate.swift */; };
 		B82DF85E1FD88ED9008290F5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82DF85D1FD88ED9008290F5 /* FirstViewController.swift */; };
 		B82DF8601FD88ED9008290F5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82DF85F1FD88ED9008290F5 /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40B9455C1FE07696007459F0 /* Money-Free-Download-PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Money-Free-Download-PNG.png"; sourceTree = "<group>"; };
 		B82DF8581FD88ED9008290F5 /* TheTimeWaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheTimeWaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82DF85B1FD88ED9008290F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B82DF85D1FD88ED9008290F5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				B82DF85D1FD88ED9008290F5 /* FirstViewController.swift */,
 				B82DF85F1FD88ED9008290F5 /* SecondViewController.swift */,
 				B82DF8611FD88ED9008290F5 /* Main.storyboard */,
+				40B9455C1FE07696007459F0 /* Money-Free-Download-PNG.png */,
 				B82DF8641FD88ED9008290F5 /* Assets.xcassets */,
 				B82DF8661FD88ED9008290F5 /* LaunchScreen.storyboard */,
 				B82DF8691FD88ED9008290F5 /* Info.plist */,
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B9455D1FE07696007459F0 /* Money-Free-Download-PNG.png in Resources */,
 				B82DF8681FD88ED9008290F5 /* LaunchScreen.storyboard in Resources */,
 				B82DF8651FD88ED9008290F5 /* Assets.xcassets in Resources */,
 				B82DF8631FD88ED9008290F5 /* Main.storyboard in Resources */,
